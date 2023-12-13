@@ -16,10 +16,6 @@ spring:
     show-sql: true
   sql:
     init:
-      mode: always
-  profiles:
-    active:
-      - "prod"
 
 build:
   version: "1.0"
