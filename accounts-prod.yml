@@ -23,7 +23,7 @@ build:
   version: "1.0"
 
 accounts:
-  message: "welcome accounts prod"
+  message: "welcome accounts production"
   contactDetail:
     name: "John"
     email: "john@gmail.com"
