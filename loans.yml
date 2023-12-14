@@ -1,25 +1,26 @@
+server:
+  port: 9000
 spring:
-  h2:
-    console:
-      enabled: true
+  application:
+    name: "loans"
+
+  config:
+    import: "optional:configserver:http://configserver:8072/"
   datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
+    url: jdbc:mysql://localhost:3306/loans
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.MySQL8Dialect
         hbm2ddl:
           auto: update
     show-sql: true
   sql:
     init:
       mode: always
-  profiles:
-    active:
-      - "prod"
 
 build:
   version: "1.0"
@@ -32,3 +33,15 @@ accounts:
   onCallSupport:
     - (080) 123456
     - (080) 987654
+    -
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+
