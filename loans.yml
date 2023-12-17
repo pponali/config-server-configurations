@@ -22,7 +22,7 @@ spring:
 build:
   version: "1.0"
 
-accounts:
+loans:
   message: "welcome loans default"
   contactDetail:
     name: "John"
