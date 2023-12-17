@@ -16,12 +16,13 @@ spring:
     show-sql: true
   sql:
     init:
+      mode: always
 
 
 build:
   version: "1.0"
 
-cards:
+loans:
   message: "welcome cards default"
   contactDetail:
     name: "John"
