@@ -21,7 +21,7 @@ spring:
 build:
   version: "1.0"
 
-accounts:
+cards:
   message: "welcome cards default"
   contactDetail:
     name: "John"
