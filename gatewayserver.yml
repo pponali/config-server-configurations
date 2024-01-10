@@ -5,7 +5,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defautZone: http://localhost:8761/eureka
+      defautZone: http://eurekaserver:8761/eureka
     register-with-eureka: true
     fetch-registry: true
     
